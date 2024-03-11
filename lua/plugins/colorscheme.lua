@@ -1,4 +1,3 @@
-return
 -- {
 --	"navarasu/onedark.nvim",
 --	lazy = false,
@@ -15,7 +14,7 @@ return
 --		vim.cmd.colorscheme "onedark"
 --	end
 --}
-{
+return {
 	"folke/tokyonight.nvim",
 	lazy = false,
 	priority = 1000,
@@ -24,8 +23,8 @@ return
 			style = "night",
 			styles = {
 				functions = { bold = true },
-			}
+			},
 		})
-		vim.cmd.colorscheme "tokyonight"
-	end
+		vim.cmd.colorscheme("tokyonight")
+	end,
 }

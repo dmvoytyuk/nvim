@@ -4,7 +4,7 @@ return {
 	config = function()
 		require("lualine").setup({
 			options = {
-				theme = "onedark"
+				theme = "tokyonight"
 			},
 			winbar = {
 				lualine_a = {"buffers"},
