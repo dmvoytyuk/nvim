@@ -8,9 +8,13 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
-			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "cssls", "html", "tsserver" },
-			})
+			lazy = false
+			opts = {
+				auto_install = true
+			}
+			--require("mason-lspconfig").setup({
+			--ensure_installed = { "lua_ls", "cssls", "html", "tsserver" },
+			--})
 		end,
 	},
 	{
