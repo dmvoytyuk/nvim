@@ -7,5 +7,7 @@ return {
 	},
 	{
 		"tpope/vim-fugitive",
+		vim.keymap.set("n", "<leader>gc", ":Git commit -a<CR>"),
+		vim.keymap.set("n", "<leader>gp", ":Git push<CR>"),
 	},
 }
