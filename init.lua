@@ -8,6 +8,7 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<C-.>", ":bnext<CR>")
 vim.keymap.set("n", "<C-,>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-x>", ":bd<CR>")
+vim.keymap.set("n", "<leader><space>", ":noh<CR>")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
