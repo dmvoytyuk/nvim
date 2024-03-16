@@ -6,6 +6,7 @@ vim.opt.shiftwidth = 2
 vim.opt.termguicolors = true
 vim.g.mapleader = " "
 vim.keymap.set("n", "<C-.>", ":bnext<CR>")
+vim.keymap.set("n", "<C-,>", ":bprevious<CR>")
 vim.keymap.set("n", "<C-x>", ":bd<CR>")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
