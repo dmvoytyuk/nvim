@@ -1,5 +1,9 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	dependencies = {
+		"windwp/nvim-ts-autotag",
+	},
+
 	build = ":TSUpdate",
 	config = function()
 		local configs = require("nvim-treesitter.configs")
@@ -20,12 +24,12 @@ return {
 			matchup = {
 				enable = true,
 			},
-			-- autotag = {
-			-- 	enable = true,
-			-- 	enable_rename = true,
-			-- 	enable_close = true,
-			-- 	enable_close_on_slash = true,
-			-- },
+			autotag = {
+				enable = true,
+				enable_rename = true,
+				enable_close = true,
+				enable_close_on_slash = true,
+			},
 		})
 	end,
 }

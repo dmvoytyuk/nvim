@@ -10,10 +10,10 @@ return {
 		config = function()
 			lazy = false
 			opts = {
-				auto_install = true
+				auto_install = true,
 			}
 			--require("mason-lspconfig").setup({
-			--ensure_installed = { "lua_ls", "cssls", "html", "tsserver" },
+			--	ensure_installed = { "lua_ls", "cssls", "html", "tsserver", "jsonls" },
 			--})
 		end,
 	},
@@ -32,6 +32,9 @@ return {
 				capabilities = capabilities,
 			})
 			lspconfig.html.setup({
+				capabilities = capabilities,
+			})
+			lspconfig.jsonls.setup({
 				capabilities = capabilities,
 			})
 

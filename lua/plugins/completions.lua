@@ -1,6 +1,9 @@
 return {
 	{
 		"hrsh7th/cmp-nvim-lsp",
+		config = function()
+			require("cmp_nvim_lsp").setup({})
+		end,
 	},
 	{
 		"L3MON4D3/LuaSnip",
@@ -22,7 +25,6 @@ return {
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
 			require("luasnip.loaders.from_vscode").lazy_load()
-			luasnip.filetype_extend("javascriptreact", { " html " })
 
 			cmp.setup({
 				snippet = {
@@ -83,7 +85,9 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 				}, {
-					{ name = "buffer" },
+					{
+						name = "buffer",
+					},
 				}),
 			})
 		end,
