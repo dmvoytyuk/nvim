@@ -16,6 +16,9 @@ return {
 		"hrsh7th/cmp-path",
 	},
 	{
+		"hrsh7th/cmp-buffer",
+	},
+	{
 		"hrsh7th/nvim-cmp",
 		event = { "InsertEnter", "CmdlineEnter" },
 		config = function()
@@ -23,7 +26,7 @@ return {
 				unpack = unpack or table.unpack
 				local line, col = unpack(vim.api.nvim_win_get_cursor(0))
 				return col ~= 0
-					and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+						and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 			end
 			local cmp = require("cmp")
 			local luasnip = require("luasnip")
@@ -88,6 +91,7 @@ return {
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" }, -- For luasnip users.
 					{ name = "path" },
+					{ name = "buffer" },
 				}, {
 					{
 						name = "buffer",
